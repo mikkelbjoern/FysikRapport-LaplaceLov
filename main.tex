@@ -108,8 +108,27 @@ Den siger at:
 $$F=B \cdot I \cdot L\cdot \sin (\theta)$$
 
 \section{Teori}
-Her skal der stå noget teori... tjek bogen.
+Laplace lov som den vil blive behandlet i denne rapport, er udelukkende en empirisk begrundet lov. 
+Dog har den nogle interessante følger i forhold til kraften på elektroner og andre ladede partikler i et magnetfelt, som jeg vil behandle i et perspektiverende afsnit. 
 
+Laplace lov er lidt mere beskrivende en den form jeg beskrev i indledningen. 
+Hvis man betragter kraften, strømmen retning og magnetfeltet som vektorer $\overrightarrow{F}$, $\overrightarrow{l}$ og $\overrightarrow{B}$.
+Bemærk at magnetfeltet egentlig er et vektorfelt, men at alle relevante vektorer i feltet er lig hinanden da vi arbejder i et homogent magnetfelt. 
+Vi kan derfor tillade os at behandle det som en vektor $\overrightarrow{B}$, som er lig en vilkårlig vektor i vektorfeltet. 
+
+Den lov vi vil eftervise er beskrevet med vektorer på følgende måde:
+\newcommand{\vek}[1]{\overrightarrow{#1}}
+
+$$\vek{F} = I\cdot (\vek{l}\times \vek{B})$$
+
+Ved at huske at der for krydsproduktet af to vilkårlige vektorer,$\vek{v}$ og $\vek{u}$ med vinkel $\theta$ mellem sig, at 
+
+$|\vek{v} \times \vek{u}|=|\vek{v}|\cdot |\vek{u}| \cdot \sin (\theta)$ ved vi altså at den ovenfor angivne sammenhæng angiver den samme længe af vektor $\vek{F}$ som den første formel, den angiver også bare en længde.
+
+I dette forsøg kommer vi kun til at kigge på et scenarie hvor $\theta=90$. 
+Derfor vil kraften altid have samme retning og $\sin (\theta) = 1$ og vi får altså bare en sammenhæng på formen:
+$$F = B\cdot I\cdot L$$
+som vi vil undersøge.  
 \section{Forsøgsbeskrivelse}
 Vi udførte tre forsøg til at bekræfte loven. 
 I alle tre forsøg har vi haft en ''Hestesko''-magnet anbragt på en vægt. 
@@ -126,7 +145,7 @@ På figur \ref{opstilling} kan ses et billede af den beskrevne opstilling.
 \label{opstilling}
 \end{figure}
 
-Vi lavede da tre måleserier hvor vi kiggede på ændringen i $F$, nå vi varierede henholdsvist $B,I$ og $L$, mens vi holdt de andre konstante. 
+Vi lavede da tre måleserier hvor vi kiggede på ændringen i $F$, nå vi varierede henholdsvis $B,I$ og $L$, mens vi holdt de andre konstante. 
 
 
 
