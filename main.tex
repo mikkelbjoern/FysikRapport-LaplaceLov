@@ -308,6 +308,44 @@ Forsøgene ser ud til at bekræfte at Laplace lov gælder.
 Selvom der er små urenheder i vores data, der ikke helt stemmer overens med teorien perfekt, så kan disse bortforklares nogenlunde rimeligt. 
 Vi kan derfor konkludere at observationerne ikke strider imod Laplace lov.
 
+\pagebreak
+
+\section{Perspektivering: Kraften på en elektron i et magnetfelt}
+Vi kan med Laplace lov udlede hvordan en elektron vil blive påvirket i et magnetfelt. 
+Hvis vi forestiller os en leder af længde $l$ med en strøm $I$ igennem i et magnetfelt med styrke $B$, som ses på figur \ref{leder}.
+Da ved vi at hele lederen vil blive påvirket med en kraft $F=BIl$ fra Laplace lov.
+Da vi ved at strømmen gennem lederen er summen af kraften på hver enkelt elektron, kan vi da beskrive en kraft på hver enkelt elektron, $F_e$.
+Vi indfører da en betegnelse $n$, der beskriver antallet af elektroner i lederen per længde.
+Da må vi have $n\cdot l$ elektroner i lederstykket, og vi får da at kraften på hver enkelt elektron kan beskrives ved $F_e= \frac{F}{n\cdot l}$, hvor $F$ er den samlede kraft på lederen. 
+
+\begin{figure}[h]
+\begin{center}
+
+\includegraphics[scale=0.3]{elektron}
+\caption{En leder i et magnetfelt. Tegningen er taget fra Vejen til Fysik A2.}
+\label{leder}
+
+\end{center}
+\end{figure}
+
+Vi kan ydermere beskrive $I$ ud fra $n$ og $l$. 
+Da den samlede ladning i lederen må kunne beskrives som $Q=n\cdot l \cdot e$, hvor $e$ er elementarladningen, må vi kunne beskrive $I$ som $I=\dfrac{Q}{t}=\dfrac{n\cdot l \cdot e}{t}$ hvor $t$ er den tid det tager elektronen at bevæge sig gennem lederstykket.
+
+Denne måde at skrive $I$ på kan da indsættes i Laplace lov:
+$$F = B\cdot I \cdot l = \dfrac{B\cdot n\cdot l\cdot e \cdot l}{t}$$
+
+Da kan vi udnytte at vi før så at $F_e = \dfrac{F}{n\cdot l}$ til at indse:
+$$F_e = \dfrac{F}{n\cdot l} = \dfrac{\dfrac{B\cdot n\cdot l\cdot e \cdot l}{t}}{n\cdot l} = \dfrac{B\cdot e\cdot l}{t}$$
+
+Vi ser da at $\dfrac{l}{t}$ må være den gennemsnitlige fart for en elektron, da den ene beskriver distancen de bevæger sig og den anden den tid bevægelsen tager. 
+Vi kan derfor skrive denne størrelse $v$ og få:
+$$F_e = Bev$$
+
+
+
+
+
+ 
 
 
 
