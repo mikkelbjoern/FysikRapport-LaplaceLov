@@ -196,7 +196,6 @@ Bemærk at vægten har været nulstillet inden målingerne, og vi har derfor kun
 \begin{table}[h]
 \centering
 
-\label{my-label}
 \begin{tabular}{|l|ll|}
 \hline
 \textbf{Længde ($cm$)} & \textbf{Masse($g$)} & \textbf{Kraft ($mN$)} \\ \hline
@@ -218,7 +217,6 @@ Da det magnetfelt de skaber er ukendt, har vi blot noteret antallet af magneter.
 \begin{table}[h]
 \centering
 
-\label{my-label}
 \begin{tabular}{|l|ll|}
 \hline
 \textbf{Magneter ($B$)} & \textbf{Masse($m$)} & \textbf{Kraft($mN$)} \\ \hline
@@ -236,20 +234,64 @@ Da det magnetfelt de skaber er ukendt, har vi blot noteret antallet af magneter.
 
 \section{Databehandling}
 Da vi forventer en lineær sammenhæng i alle tre tilfælde, tegner jeg grafer for disse og laver en lineær regression:
-\subsection{Delforsøg 1}
+\subsubsection{Delforsøg 1}
 \begin{center}
 \includegraphics[scale=0.5]{graf1}
 \end{center}
 
-\subsection{Delforsøg 2}
+\subsubsection{Delforsøg 2}
 \begin{center}
 \includegraphics[scale=0.5]{graf2}
 \end{center}
 
-\subsection{Delforsøg 3}
+\subsubsection{Delforsøg 3}
 \begin{center}
 \includegraphics[scale=0.5]{graf3}
 \end{center}
+
+\subsection{Fundne sammenhænge}
+I delforsøg nr. 1 fås sammenhængen: $F=4.200\frac{mN}{A}*I+1.057mN$.
+
+I delforsøg nr. 2 fås sammenhængen : $F = 2.559\frac{mN}{cm}*L + 1.260mN$.
+
+I delforsøg nr. 3 fås sammenhængen $F = 4.862mN\cdot n + 2.311 mN$, hvor $n$ repræsenterer antallet af små magneter, hvoraf der i alt skulle 6 til at udgøre den magnet der er brugt i de andre delforsøg. 
+
+Jeg vil nu undersøge, hvor godt resultaterne passer med Laplace lov. 
+Dette vil jeg gøre ved at beregne magnetfeltets størrelse $B$ i hvert af de tre forsøg.
+
+\subsubsection{Delforsøg 1: Bestemmelse af $B$}
+Den fundne sammenhæng I delforsøg nr. 1 var: $F=4.200\frac{mN}{A}\cdot I+1.057mN$. 
+Først ser vi bort fra konstantledet, da dette kun er på for at tage højde for en vægt som magneten har påvirket vægten med.
+Vi har da sammenhængen $F=4.200\frac{mN}{A}\cdot I$. 
+Ved Laplace lov får vi at $F=B\cdot L \cdot I$ og dermed 
+$B\cdot L = 4.200\frac{mN}{A}$. 
+
+Da kan vi beregne $B$ som $\dfrac{4.200\frac{mN}{A}}{L}$.
+Vi ved som beskrevet i dataafsnittet af $L=3.2cm$. 
+Vi kan da beregne en værdi for $B$:
+$$B = \dfrac{4.200\frac{mN}{A}}{L} = \dfrac{4.200\frac{mN}{A}}{3.2cm} = 0.13T$$
+
+\subsubsection{Delforsøg 2: Bestemmelse af $B$}
+Den fundne sammenhæng i dette delforsøg er $F = 2.559\frac{mN}{cm}*L + 1.260mN$.
+Ligesom i forrige afsnit ser vi bort fra konstantledet.
+Vi kan da med et argument på samme måde som i forrige afsnit se at $B=\dfrac{2.559\frac{mN}{cm}}{I}$. 
+I dataafsnittet kan ses at $I=2.04A$.
+
+$$B = \dfrac{2.559\frac{mN}{cm}}{I}  = \dfrac{2.559\frac{mN}{cm}}{2.04A} = 0.12T$$
+
+\subsubsection{Delforsøg 3: Bestemmelse af $B$}
+Dette forsøg er lidt anderledes end de andre.
+Først ser vi dog at vi ligesom i de andre forsøg bør fjerne konstantleddet: $F = 4.862mN\cdot n$ med $n$ værende antallet af små magneter. 
+ 
+Vi vil her forvente at $B$ kan bestemme $B$ som et produkt af alle de små magneter der skulle til for at ave hele magneten. 
+Hvis vi kalder magnetfeltsstyrken fra en af de små magneter der skulle til at lave den store for $B_1$, vil vi da forvente af $B=6B_1$, da den store magnet var lavet af $6$ små.
+Da vi med Laplace lov har at $F=BIL$ og magnetfeltstyrken afhænger af $n$ som $B=n\cdot B_1$, forventer vi altså $F=n\cdot B_1 \cdot I \cdot L$.
+Da vi fra forsøget har $F=4.862mN\cdot n$, må vi ved at kombinere de to få: 
+$B_1 \cdot I \cdot L = 4.862mN$.
+Da vi har fra datasektionen at $I=2.01A$ og $L=8.4cm$, får vi altså 
+$$B_1 = \dfrac{4.862mN}{2.01 A\cdot 8.4 cm}=2.9\cdot 10^{-2}T$$
+Da kan $B$ beregnes:
+$$B = 6 B_1 = 6\cdot 2.9\cdot 10^{-2}T=0.18T$$
 
 
 \end{document}
